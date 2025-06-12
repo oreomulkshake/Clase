@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+    <p id="texto">texto original</p> <!-- p#mensaje -->
+<button onclick="modificarEstilo()">modificar estilo</button>
+<script>
+  let tamañoActual=50;
+    function modificarEstilo(){   
+   
+
+    const texto= document.getElementById("texto");
+    
+    texto.style.fontSize = tamañoActual + "px";
+     tamañoActual += 50;
+
+      texto.style.color="red";
+    }
+// como cambiar el tamaño del texto de 50px en 50px
+</script>
+</body>
+</html>
