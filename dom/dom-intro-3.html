@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="">
+</head>
+
+<body>
+    <ul id="miLista">
+
+    </ul>
+    <button id="add">Agregar item</button> <!-- onclick="agregarLi()"  se lo borré a button -->
+    <script>
+        let contador = 1;
+
+        //addEventListener ("<el evento>", <la referencia a la funcion>) con parentesis llama a la funcion y la ejecuta
+        document.getElementById("add").addEventListener("click", agregarLi);
+
+
+        function agregarLi() {
+            const elemento = document.createElement("li");
+            elemento.innerHTML = `Item ${contador} <button onclick="borrarli(this)"> borrar </button>`;  // borra el boton 
+
+            let miLista = document.getElementById("miLista");
+            miLista.appendChild(elemento);
+            contador++;
+        }
+
+        function borrarli(elemento) {
+            alert(elemento);
+            elemento.parentElement.remove();
+        }
+
+    </script>
+</body>
+
+</html>
